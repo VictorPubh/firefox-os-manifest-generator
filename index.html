@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>FirefoxOS Manifest Generator v1.0</title>
+  <link rel="prefetch" type="application/l10n" href="data/l10n/locales.ini" />
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+  <div class="container bg-white">
+     <div class="row">
+      <div class="col-md-8">
+        <h2 data-l10n-id="title"></h2>
+      </div>
+      <div class="col-md-4">
+        <button id="manifest-gen" class="btn btn-success"><i class="glyphicon glyphicon-download-alt">&nbsp;</i> <strong>manifest.json</strong></button>
+      </div>
+       <div class="col-md-12">
+         <hr />
+       </div>
+       <div class="col-md-9">
+          <div class="form-group">
+            <label data-l10n-id="app_name"></label>
+            <input type="text" id="app_name" data-l10n-id="app_name" maxlength="128" class="form-control">
+          </div>
+       </div>
+       <div class="col-md-3">
+          <div class="form-group">
+            <label data-l10n-id="app_version"></label>
+            <input data-l10n-id="app_version" type="text" id="app_version" class="form-control">
+          </div>
+       </div>
+       <div class="col-md-12">
+        <div class="form-group">
+          <label data-l10n-id="app_desc"></label>
+          <input type="text" data-l10n-id="app_desc" id="app_desc" maxlength="1024" class="form-control">
+        </div>
+       </div>
+       <div class="col-md-12">
+         <div class="form-group">
+           <label data-l10n-id="app_icon"></label>
+            <div class="row">
+              <div class="col-md-3">
+                <select id="icon-list" class="form-control">
+                    <option value="16">16 x 16</option>
+                    <option value="32">32 x 32</option>
+                    <option value="48">48 x 48</option>
+                    <option value="64">64 x 64</option>
+                    <option value="128"> 128 x 128</option>
+                    <option value="256"> 256 x 256</option>
+                  </select>
+              </div>
+              <div class="col-md-9">
+                <div class="form-group">
+                  <div class="input-group">
+                    <input type="text" id="icon-input" data-l10n-id="app_icon" class="form-control">
+                    <span class="input-group-btn">
+                      <button id="icon-add" class="btn btn-success">+</button>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="row" id="icon-content">
+                  <div class="col-md-12" id="no-translation"><i data-l10n-id="icon_empty"></i></div>
+                </div>
+              </div>
+            </div>
+         </div>
+       </div>
+       <div class="col-md-12">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label data-l10n-id="dev_name"></label>
+              <input type="text" class="form-control" id="dev-name" data-l10n-id="dev_name">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label data-l10n-id="dev_site"></label>
+              <input type="text" class="form-control" id="dev-site" data-l10n-id="dev_site">
+            </div>
+          </div>
+        </div>
+       </div>
+       <div class="col-md-12">
+         <div class="row">
+          <div class="col-md-12">
+            <div class="form-group">
+              <label data-l10n-id="lang_default"></label>
+              <select id="locale-default" class="form-control"></select>
+            </div>
+          </div>
+         </div>
+       </div>
+       <div class="col-md-12">
+         <div class="row">
+          <div class="col-md-4">
+            <div class="form-group">
+              <label data-l10n-id="lang_alt"></label>
+              <select id="locale-alt" class="form-control"></select>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <label data-l10n-id="dev_name"></label>
+              <input id="locale-desc" type="text" class="form-control" data-l10n-id="dev_name">
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <label data-l10n-id="dev_site"></label>
+              <div class="input-group">
+                <input id="locale-site" type="text" placeholder="Website" data-l10n-id="dev_site" class="form-control">
+                <span class="input-group-btn">
+                  <button id="locale-add" class="btn btn-success">+</button>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="row" id="locale-container">
+              <div class="col-md-12" id="no-translations"><i data-l10n-id="lang_empty"></i></div>
+            </div>
+          </div>
+         </div>
+       </div>
+     </div>
+   </div>
+   <div class="container">
+      <div class="col-md-6">
+        <p>Copyright 2014 &copy; <a href="https://github.com/VictorPubh">Viictor Capivara</a>.</p>
+        <p>Thanks to <a href="https://github.com/marti1125">marti1125</a> and <a href="https://github.com/gpedro">gpedro</a>.</p>
+      </div>
+      <div class="col-md-6 text-right">
+        <a href="https://github.com/VictorPubh"><img src="img/selo-capivara.png" class="selo" alt="Selo Capivara de Qualidade"></a>
+      </div>
+   </div>
+
+   <a href="https://github.com/VictorPubh/firefox-os-manifest-generator"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/blob.js"></script>
+  <script src="js/jquery.filesaver.js"></script>
+  <script src="js/l10n.js"></script>
+  <script src="js/manifest.js"></script>
+</body>
+</html>
